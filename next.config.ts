@@ -1,7 +1,21 @@
 import type { NextConfig } from "next";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/ko",
+        permanent: false,
+      },
+    ];
+  },
 };
+
+initOpenNextCloudflareForDev();
 
 export default nextConfig;
