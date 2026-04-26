@@ -9,6 +9,7 @@ export const UI = {
     pressRelease: "보도자료",
     finalReleaseLabel: "마무리",
     yearRailLabel: "연도 인디케이터",
+    wipBanner: "메모리얼 페이지 구축 중입니다 — 본문은 임시 더미 텍스트입니다",
   },
   en: {
     scrollHint: "Scroll to walk through time",
@@ -18,6 +19,7 @@ export const UI = {
     pressRelease: "Press release",
     finalReleaseLabel: "Finale",
     yearRailLabel: "Year indicator",
+    wipBanner: "Memorial site under construction — body copy is placeholder",
   },
 } as const satisfies Record<Lang, Record<string, string>>;
 

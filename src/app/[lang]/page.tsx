@@ -4,6 +4,7 @@ import type { Lang } from "@/content/timeline";
 import { TimelineHero } from "@/components/timeline/TimelineHero";
 import { TimelineFinale } from "@/components/timeline/TimelineFinale";
 import { TimelineRoot } from "@/components/timeline/TimelineRoot";
+import { ConstructionBanner } from "@/components/timeline/ConstructionBanner";
 
 export const dynamicParams = false;
 
@@ -21,11 +22,14 @@ export default async function TimelinePage({
   const lang = rawLang as Lang;
 
   return (
-    <TimelineRoot
-      timeline={TIMELINE}
-      lang={lang}
-      hero={<TimelineHero intro={TIMELINE.intro} lang={lang} />}
-      finale={<TimelineFinale finale={TIMELINE.finale} lang={lang} />}
-    />
+    <>
+      <ConstructionBanner lang={lang} />
+      <TimelineRoot
+        timeline={TIMELINE}
+        lang={lang}
+        hero={<TimelineHero intro={TIMELINE.intro} lang={lang} />}
+        finale={<TimelineFinale finale={TIMELINE.finale} lang={lang} />}
+      />
+    </>
   );
 }
